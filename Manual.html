@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+    <head>
+        <title>Manual de programação para calouros</title>
+    </head>
+    <body>
+        <h2>Introdução</h2>
+        <p>
+            Este é um pequeno manual para ajudar os iniciantes do curso de programação do COLTEC. A linguagem utilizada é C e 
+            aprenderemos o básico, como variáveis e expressões matemáticas, estruturas condicionais e de repetição e como 
+            executar um programa em C.
+        </p>
+        <p>Exemplo de um programa simples escrito em C</p>
+        <pre>
+            <code>
+                #include &ltstdio.h&gt
+                int main ()
+                {
+                    printf ("Estou aprendendo a programar em C");
+                    return 0;
+                }
+            </code>
+        </pre>
+
+        <h2>Variáveis e expressões matemáticas</h2>
+        <p>
+            A variável é representada no texto de um programa por um nome que corresponde a uma posição da memória que contém o seu
+            valor.
+        </p>
+        <p>
+             O nome de uma variável é defindo pelo programador e deve ser iniciado por uma letra que pode ser seguida de tantas letras,
+             algarismos, ou sublinha quanto se desejar e é aconselhável que seja significativo do valor que ela representa.
+        </p>
+        <pre>
+            <code>
+                #include &ltstdio.h&gt
+                int main ()
+                {
+                    int idade=17; //percebam que o nome da variável me diz exatamente o que ela traz consigo. Nomes como "i" não
+                                         //representam nada no meu código.
+                    printf ("Meu nome é Carol e eu tenho %i anos de idade", idade);
+                    return 0;
+                }         
+            </code>
+        </pre>
+        <h2>Estruturas condicionais</h2>
+        <h3>A cláusula <i>if</i></h3>
+        <pre>
+            <code>
+                if (condição)
+                {
+                    bloco de operações
+                }
+            </code>
+        </pre>
+        <p> 
+            A condição pode assumir um valor verdadeiro ou falso. O bloco de operações só é executado se a condição for verdadeira.
+            Um bloco de operações pode conter outro bloco de operações, ou seja, pode haver estruturas de seleção aninhadas.
+        </p>
+        <h3>A cláusula <i>else</i></h3>
+        <p>
+            Uma versão mais completa da cláusula if contém blocos de operações tanto na parte verdadeira quanto na falsa. O bloco de
+            operações associado a condição falsa começa com a cláusula else:
+        </p>
+        <pre>
+            <code>
+                if (condição)
+                {
+                    bloco de operações
+                }
+                else
+                {
+                    bloco de operações
+                }
+            </code>
+        </pre>
+        <h3>A construção <i>else if</i></h3>
+        <p> Quando queremos associar diferentes blocos de operações a diferentes condições, usamos a construção <i>else if</i></p>
+        <pre>
+            <code>
+                if (condição)
+                {
+                    bloco de operações
+                }
+                else if (condição)
+                {
+                    bloco de operações
+                }
+                else
+                {
+                    bloco de operações
+                }
+            </code>
+        </pre>
+        <h2>Estruturas de repetição</h2>
+        <h3>O comando <i>while</i></h3>
+        <p>Usado para repetições com teste no início</p>
+        <pre>
+            <code>
+                #include &ltstdio.h&gt
+                int main ()
+                {
+                    int numero, soma;
+                    printf ("Digite um número inteiro");
+                    scanf ("%d", &ampnumero);
+                    soma = 0;
+
+                    while (numero != 0)
+                    {
+                        soma = soma + numero;
+                        printf ("\nDigite um número inteiro: ");
+                        scanf ("%d", &ampnumero);
+                    }
+
+                    printf ("A soma dos números digitados foi %d", soma);
+                    return 0;
+                }
+            </code>
+        </pre>
+        <h3>O comando <i>do-while</i></h3>
+        <p>Utilizado para repetições com teste no final</p>
+        <pre>
+            <code>
+                #include &ltstdio.h&gt
+                int main ()
+                {
+                    int numero, contador;
+                    contador = 0;
+
+                    do
+                    {
+                        printf ("Digite um numero inteiro: ");
+                        scanf ("%d", &ampnumero);
+                        printf ("O quadrado de %d eh %d", numero, numero*numero);
+                        contador++;
+                    } while (contador < 100);
+                    return 0;
+                }
+            </code>
+        </pre>
+        <h3>O comando <i>for</i></h3>
+        <p>Utilizando uma estrutura de repetição com variável de controle</p>
+        <pre>
+            <code>
+                #include &ltstdio.h&gt
+                int main ()
+                {
+                    int num_inicial, num_final, i;
+
+                    printf ("Digite o número inicial: ");
+                    scanf ("%d", &ampnum_inicial);
+                    printf ("Digite o número final: ");
+                    scanf ("%d", &ampnum_final);
+
+                    for (i=0; i&lt=num_final; i++)
+                        printf ("Valor de i: %d", i);
+
+                    return 0;
+                }
+            </code>
+        </pre>
+    </body>
+</html>
